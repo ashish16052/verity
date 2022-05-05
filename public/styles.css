@@ -1,0 +1,304 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #ffffff;
+  --font: #000000;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--font);
+  background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font);
+}
+
+header {
+  background-color: var(--bg);
+  margin: auto 0px;
+  padding: 10px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+header h1 {
+  font-weight: 200;
+  display: inline-block;
+}
+
+.icon {
+  color: #fff;
+  margin: 0 10px;
+}
+
+header .links {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  height: 2.5rem;
+}
+
+footer p {
+  color: #ccc;
+}
+
+.book {
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 28vw;
+  margin: 16px 1vw;
+  position: relative;
+}
+
+.note img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.note h1 {
+  font-size: 1.5em;
+  margin-bottom: 6px;
+}
+
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note .userinfo {
+  display: flex;
+  align-items: center;
+}
+
+.note .userinfo .userpfp {
+  margin-right: 5px;
+}
+
+.note .userinfo .date {
+  margin-left: auto;
+  opacity: 0.6;
+}
+
+.create {
+  width: 100%;
+}
+
+form.create-note {
+  position: relative;
+  width: 80%;
+  height: 80vh;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+form.create-note input,
+form.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 20px 5px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+
+form.create-note textarea {
+  height: 72%;
+}
+
+form.create-note button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: black;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+.note button {
+  background-color: var(--bg);
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: black;
+  border: none;
+  height: 36px;
+  width: 36px;
+  cursor: pointer;
+  outline: none;
+}
+
+.blogpage {
+  width: 100%;
+  padding: 20px 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  align-items: flex-start;
+}
+
+.blogcol {
+  width: 75%;
+  background-color: var(--bg);
+  padding: 20px 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.blogcol h1 {
+  margin: 0 0 10px 0;
+}
+
+.blogcol img {
+  height: 350px;
+  width: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.blogcol p {
+  font-size: 20px;
+}
+
+
+.reviewcol {
+  background-color: var(--bg);
+  padding: 20px 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 80px;
+  min-height: 80vh;
+  width: 20vw;
+}
+
+.reviewcol .comment {
+  padding: 10px 0;
+}
+
+.reviewcol .comment .userinfo {
+  display: flex;
+  align-items: center;
+}
+
+.reviewcol .comment p {
+  overflow-wrap: break-word;
+}
+
+.reviewcol .comment .userinfo p {
+  margin-left: 5px;
+  opacity: 0.6;
+}
+
+.reviewcol h2 {
+  margin-bottom: 10px;
+}
+
+.reviewcol .add-review {
+  position: relative;
+}
+
+.reviewcol .add-review input {
+  width: 100%;
+  border: none;
+  padding: 20px 5px;
+  padding-left: 25px;
+  outline: none;
+  font-family: inherit;
+  resize: none;
+}
+
+.reviewcol .add-review .submit {
+  cursor: pointer;
+  background-color: var(--font);
+  color: var(--bg);
+  border-radius: 50%;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+}
+
+@media only screen and (max-width: 900px) {
+  .note {
+    width: 42vw;
+  }
+
+  form.create-note {
+    width: 80%;
+  }
+
+  .blogpage {
+    justify-content: center;
+  }
+
+  .blogcol {
+    width: 95%;
+  }
+
+  .reviewcol {
+    width: 95%;
+    margin: 20px 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .book {
+    padding: 10px 7vw;
+  }
+
+  .note {
+    width: 86vw;
+  }
+}
