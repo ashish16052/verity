@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/verity/static/js/main.d285da41.js",
+    "index.html": "/verity/index.html",
+    "main.d285da41.js.map": "/verity/static/js/main.d285da41.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.d285da41.js"
+  ]
+}
